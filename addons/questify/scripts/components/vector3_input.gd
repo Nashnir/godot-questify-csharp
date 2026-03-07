@@ -16,15 +16,15 @@ var _current_value: Vector3 = Vector3.ZERO
 func _ready() -> void:
 	x_value.value_changed.connect(func(new_value: float):
 		_current_value.x = new_value
-		value_changed.emit(_current_value)	
+		value_changed.emit(_current_value)
 	)
 	y_value.value_changed.connect(func(new_value: float):
 		_current_value.y = new_value
-		value_changed.emit(_current_value)	
+		value_changed.emit(_current_value)
 	)
-	y_value.value_changed.connect(func(new_value: float):
+	z_value.value_changed.connect(func(new_value: float):
 		_current_value.z = new_value
-		value_changed.emit(_current_value)	
+		value_changed.emit(_current_value)
 	)
 
 

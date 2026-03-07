@@ -14,15 +14,13 @@ script = ExtResource("1_b3q5r")
 name = "First Quest"
 description = "This is your first quest. Good luck!"
 id = "tvxd77rjNf"
-optional = false
 graph_editor_position = Vector2(-580, -40)
-graph_editor_size = Vector2(448.59, 520)
+graph_editor_size = Vector2(448.59003, 520)
 
 [sub_resource type="Resource" id="Resource_yajv1"]
 script = ExtResource("3_aarra")
 description = "Press the button!"
 id = "9QWGIohUh9"
-optional = false
 graph_editor_position = Vector2(260, 0)
 graph_editor_size = Vector2(442.5, 549)
 
@@ -30,16 +28,14 @@ graph_editor_size = Vector2(442.5, 549)
 script = ExtResource("2_72pp1")
 from = SubResource("Resource_yljfn")
 to = SubResource("Resource_yajv1")
-edge_type = 0
 
 [sub_resource type="Resource" id="Resource_dtim7"]
 script = ExtResource("5_xh1xg")
 type = "variable"
 key = "first_button_pressed"
 id = "Uth20FqPig"
-optional = false
 graph_editor_position = Vector2(-180, 520)
-graph_editor_size = Vector2(342.316, 375.734)
+graph_editor_size = Vector2(342.31604, 375.73404)
 metadata/value = true
 
 [sub_resource type="Resource" id="Resource_7a5ni"]
@@ -52,20 +48,17 @@ edge_type = 1
 script = ExtResource("3_aarra")
 description = "Press the right button."
 id = "5xlDc6m2uI"
-optional = false
 graph_editor_position = Vector2(1120, 360)
-graph_editor_size = Vector2(396.3, 549)
+graph_editor_size = Vector2(396.29987, 549)
 
 [sub_resource type="Resource" id="Resource_3ip8i"]
 script = ExtResource("2_72pp1")
 from = SubResource("Resource_yajv1")
 to = SubResource("Resource_7rt1o")
-edge_type = 0
 
 [sub_resource type="Resource" id="Resource_c6t0o"]
 script = ExtResource("5_8vmba")
 id = "wgN2UKWKLs"
-optional = false
 graph_editor_position = Vector2(1740, 200)
 graph_editor_size = Vector2(140, 69)
 
@@ -73,14 +66,12 @@ graph_editor_size = Vector2(140, 69)
 script = ExtResource("2_72pp1")
 from = SubResource("Resource_7rt1o")
 to = SubResource("Resource_c6t0o")
-edge_type = 0
 
 [sub_resource type="Resource" id="Resource_joeod"]
 script = ExtResource("5_xh1xg")
 type = "variable"
 key = "second_button_pressed"
 id = "ARcEhhXzfH"
-optional = false
 graph_editor_position = Vector2(540, 660)
 graph_editor_size = Vector2(346.5, 354.8)
 metadata/value = "right"
@@ -95,24 +86,21 @@ edge_type = 1
 script = ExtResource("3_aarra")
 description = "Press the left button."
 id = "Z7s9xeSDCQ"
-optional = false
 graph_editor_position = Vector2(1140, -380)
-graph_editor_size = Vector2(389.7, 549)
+graph_editor_size = Vector2(389.69995, 549)
 
 [sub_resource type="Resource" id="Resource_40wp7"]
 script = ExtResource("2_72pp1")
 from = SubResource("Resource_pgkyk")
 to = SubResource("Resource_c6t0o")
-edge_type = 0
 
 [sub_resource type="Resource" id="Resource_prw56"]
 script = ExtResource("5_xh1xg")
 type = "variable"
 key = "second_button_pressed"
 id = "J7StYXvgGA"
-optional = false
 graph_editor_position = Vector2(620, -680)
-graph_editor_size = Vector2(301.4, 341.6)
+graph_editor_size = Vector2(301.40002, 341.60004)
 metadata/value = "left"
 
 [sub_resource type="Resource" id="Resource_bbd3t"]
@@ -124,7 +112,6 @@ edge_type = 1
 [sub_resource type="Resource" id="Resource_iw2n3"]
 script = ExtResource("3_iaucn")
 id = "xwO4thUnpd"
-optional = false
 graph_editor_position = Vector2(2120, 200)
 graph_editor_size = Vector2(77, 69)
 
@@ -132,13 +119,11 @@ graph_editor_size = Vector2(77, 69)
 script = ExtResource("2_72pp1")
 from = SubResource("Resource_c6t0o")
 to = SubResource("Resource_iw2n3")
-edge_type = 0
 
 [sub_resource type="Resource" id="Resource_plth8"]
 script = ExtResource("2_72pp1")
 from = SubResource("Resource_yajv1")
 to = SubResource("Resource_pgkyk")
-edge_type = 0
 
 [resource]
 script = ExtResource("4_4gs13")
