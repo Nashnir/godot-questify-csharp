@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://dgy8alkseyaws"]
+
+[ext_resource type="Script" uid="uid://s4t6go5bry0" path="res://C#-Example-Questify/QuestTestUI.cs" id="1_26ahf"]
+[ext_resource type="Resource" uid="uid://rx8h13jwd3ul" path="res://C#-Example-Questify/first_quest.tres" id="2_6nnio"]
+[ext_resource type="Script" uid="uid://blsjgj4robj6a" path="res://C#-Example-Questify/DataManager.cs" id="3_26ahf"]
+[ext_resource type="Script" uid="uid://cd6xhr4rq62bt" path="res://C#-Example-Questify/FirstButton.cs" id="4_26ahf"]
+[ext_resource type="Script" uid="uid://b2nhquxx04n76" path="res://C#-Example-Questify/SecondButton.cs" id="5_6nnio"]
+
+
+[node name="ExampleScene" type="PanelContainer" unique_id=1972319295]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_26ahf")
+_quest = ExtResource("2_6nnio")
+
+[node name="DataManager" type="Node" parent="." unique_id=1844685765]
+script = ExtResource("3_26ahf")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2031807625]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1040982914]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="CurrentQuest" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=292144073]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/CurrentQuest" unique_id=603948888]
+layout_mode = 2
+text = "Current Quest:"
+
+[node name="CurrentQuestLabel" type="Label" parent="MarginContainer/VBoxContainer/CurrentQuest" unique_id=1397384592]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CurrentObjectives" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1655469992]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/CurrentObjectives" unique_id=434778146]
+layout_mode = 2
+text = "Current Objectives:"
+
+[node name="Objectives" type="ItemList" parent="MarginContainer/VBoxContainer/CurrentObjectives" unique_id=1802340711]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+auto_height = true
+
+[node name="FirstButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=124815920 node_paths=PackedStringArray("_dataManager")]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Press the button!"
+script = ExtResource("4_26ahf")
+_dataManager = NodePath("../../../DataManager")
+
+[node name="SecondButtonContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=117467921]
+layout_mode = 2
+
+[node name="LeftButton" type="Button" parent="MarginContainer/VBoxContainer/SecondButtonContainer" unique_id=917313922 node_paths=PackedStringArray("_dataManager")]
+layout_mode = 2
+text = "Left Button"
+script = ExtResource("5_6nnio")
+_dataManager = NodePath("../../../../DataManager")
+_value = "left"
+
+[node name="RightButton" type="Button" parent="MarginContainer/VBoxContainer/SecondButtonContainer" unique_id=1007165150 node_paths=PackedStringArray("_dataManager")]
+layout_mode = 2
+text = "Right Button"
+script = ExtResource("5_6nnio")
+_dataManager = NodePath("../../../../DataManager")
+_value = "right"
+
+[node name="ResetButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=290828745]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Reset"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ResetButton" to="." method="OnResetButtonPressed"]

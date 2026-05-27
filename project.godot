@@ -8,22 +8,28 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="Questify"
 config/description="A graph-based quest editor and manager for Godot 4."
 config/tags=PackedStringArray("library")
-run/main_scene="res://example/example_scene.tscn"
-config/features=PackedStringArray("4.5")
+run/main_scene="uid://dgy8alkseyaws"
+config/features=PackedStringArray("4.6", "C#")
 config/icon="res://logo.png"
 
 [autoload]
 
-Questify="*res://addons/questify/quest_manager.gd"
+Questify="*uid://b07jy1yytqpum"
 
 [debug]
 
-gdscript/warnings/exclude_addons=false
+gdscript/warnings/directory_rules={
+"res://addons": 1
+}
 
 [dotnet]
 
